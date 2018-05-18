@@ -205,6 +205,10 @@ define([
     CodeMirror.commands.leave_current_mode = leave_current_mode;
     // end custom CodeMirror command definitions
 
+    function customize_codemirror() {
+        CodeMirror.Vim.map("jk", "<Esc>", "insert");
+    }
+
     function create_menu() {
         var menu = [
             "<li class='divider''></li>",
@@ -336,6 +340,7 @@ define([
         load_ipython_extension: function () {
             return Jupyter.notebook.config.loaded
                 .then(initialize)
+                .then(customize_codemirror)
                 .then(create_menu);
         }
     };
