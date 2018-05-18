@@ -51,42 +51,13 @@ define([
         vim: {
             add: {
                 extraKeys: {
-                    "Esc": "leave_current_mode",
-                    "Ctrl-[": "leave_current_mode"
                 },
                 command_shortcuts: {
-                    "Ctrl-c": "jupyter-notebook:interrupt-kernel",
-                    "Ctrl-z": "jupyter-notebook:restart-kernel",
-
-                    "d,d": "jupyter-notebook:cut-cell",
-                    "y,y": "jupyter-notebook:copy-cell",
-                    "u": "jupyter-notebook:undo-cell-deletion",
-
-                    "p": "jupyter-notebook:paste-cell-below",
-                    "Shift-P": "jupyter-notebook:paste-cell-above",
-
-                    "o": "jupyter-notebook:insert-cell-below",
-                    "Shift-O": "jupyter-notebook:insert-cell-above",
-
-                    "i": "jupyter-notebook:enter-edit-mode",
-                    "Enter": "jupyter-notebook:enter-edit-mode",
-
-                    "Shift-J": "jupyter-notebook:move-cell-down",
-                    "Shift-K": "jupyter-notebook:move-cell-up",
-
-                    "Shift-/": "jupyter-notebook:show-keyboard-shortcuts",
-                    "h": "jupyter-notebook:toggle-cell-output-collapsed",
-                    "Shift-H": "jupyter-notebook:toggle-cell-output-scrolled",
-
-                    "`": "jupyter-notebook:change-cell-to-code",
-                    "0": "jupyter-notebook:change-cell-to-markdown"
                 },
                 edit_shortcuts: {
-                    "Shift-Esc": "jupyter-notebook:enter-command-mode"
                 }
             },
             remove: {
-                edit_shortcuts: ["Esc"]
             },
             custom: function() {
                 disable_keyboard_manager_in_dialog(this);
